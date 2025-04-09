@@ -2,10 +2,10 @@ name: Push Server Code to GitHub
 
 on:
   schedule:
-    - cron: '* * * * *'  # every hour
+    - cron: '*/2 * * * *'  # every hour
 
 #on:
-  workflow_dispatch:  # manually trigger kar sakte ho
+  #workflow_dispatch:  # manually trigger kar sakte ho
 
 jobs:
   upload-to-github:
