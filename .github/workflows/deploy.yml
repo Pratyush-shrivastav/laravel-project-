@@ -26,6 +26,7 @@ jobs:
       run: |
         git config --global user.name "Pratyush-shrivastav"
         git config --global user.email "pratyushworking1234@gmail.com"
+        Password for 'https://Pratyush-shrivastav@github.com':"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"
         git add .
         git commit -m "CI: Sync from Ubuntu server" || echo "No changes to commit"
         git push origin main
