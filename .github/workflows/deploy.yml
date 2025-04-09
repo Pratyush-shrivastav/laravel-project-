@@ -4,8 +4,8 @@ on:
   schedule:
     - cron: '* * * * *'  # every hour
 
-on:
-  workflow_dispatch:  # manually trigger kar sakte ho
+#on:
+ # workflow_dispatch:  # manually trigger kar sakte ho
 
 jobs:
   upload-to-github:
