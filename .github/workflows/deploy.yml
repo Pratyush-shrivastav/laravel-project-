@@ -15,7 +15,7 @@ jobs:
     - name: Checkout empty repo
       uses: actions/checkout@v3
       with:
-        repository: Pratyush-shrivastav/laravel-project
+        repository: Pratyush-shrivastav/laravel-project-
         token: ${{ secrets.LARAVELPROJECT }}
 
     - name: Copy files from server
