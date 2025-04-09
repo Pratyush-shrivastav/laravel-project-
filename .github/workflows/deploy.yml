@@ -1,0 +1,31 @@
+name: Push Server Code to GitHub
+
+on:
+  schedule:
+    - cron: '* * * * *'  # every hour
+
+on:
+  workflow_dispatch:  # manually trigger kar sakte ho
+
+jobs:
+  upload-to-github:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout empty repo
+      uses: actions/checkout@v3
+      with:
+        repository: Pratyush-shrivastav/laravel-project
+        token: ${{ secrets.LARAVELPROJECT }}
+
+    - name: Copy files from server
+      run: |
+        rsync -av --delete /var/www/html/laravel-project/ ./  # simulate local copy
+
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name "Pratyush-shrivastav"
+        git config --global user.email "pratyushworking1234@gmail.com"
+        git add .
+        git commit -m "CI: Sync from Ubuntu server" || echo "No changes to commit"
+        git push origin main
