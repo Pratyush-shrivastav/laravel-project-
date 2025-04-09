@@ -5,7 +5,7 @@ on:
     - cron: '* * * * *'  # every hour
 
 #on:
- # workflow_dispatch:  # manually trigger kar sakte ho
+  workflow_dispatch:  # manually trigger kar sakte ho
 
 jobs:
   upload-to-github:
